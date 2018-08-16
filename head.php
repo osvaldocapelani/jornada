@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="O IFMT Câmpus São Vicente realiza a sua IX Jornada Científica de Ensino, Pesquisa e Extensão.">
     <meta name="author" content="Osvaldo Capelani, Kamila Barata e Otto Ahlert">
-    <meta name="generator" content="Jekyll v3.8.3">
+    <meta name="generator" content="Visual Studio Code V1.25.1">
     
     <link rel="icon" href="imagens/favicon.ico" />
     
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
     
     <title>9ª Jornada Científica</title>
 </head>
@@ -44,6 +44,7 @@
       <li class="nav-item active">
         <a class="nav-link" href="#">Link</a>
       </li>
-
+    </ul>
   </div>
 </nav>
+<div class="container-fluid">
