@@ -11,40 +11,62 @@
     <link rel="icon" href="imagens/favicon.ico" />
     
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/estilos.css">
+
     
     <title>9ª Jornada Científica</title>
 </head>
 <body>
+<div class="container">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+      <a class="navbar-brand" href="./"><img src="imagens/navIcon.jpg" width="32px"/> IX Jornada</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="./">Início <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="index.php?p=programacao">Programação</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="index.php?p=anais">Anais</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Autores</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Normas para submissão</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="index.php?p=comite-cientifico">Comitê científico</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">link</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">link</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">link</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">link</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="alinhaBanner"><img src="./imagens/bannerTopo.jpg" class="img-fluid" alt="Banner"></div>
+</div>
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<main role="main" class="container">
+  <div class="jumbotron">
+                                     
+              
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-<div class="container-fluid">
+
+
