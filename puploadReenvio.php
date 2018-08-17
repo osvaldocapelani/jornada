@@ -9,6 +9,7 @@ $coautor3	=$_POST["coautor3"];
 $coautor4	=$_POST["coautor4"];
 $grandeArea	=$_POST["grandeArea"];
 $arquivo	=$_POST["arquivo"];
+$id_trabalho = $_POST["id_trabalho"];
 
 //print_r($_POST);
 
@@ -64,15 +65,15 @@ $extensao = strtolower(end(explode('.', $_FILES['arquivo']['name'])));
                         if (move_uploaded_file($_FILES['arquivo']['tmp_name'], $_UP['pasta'] . $nome_final)) {
                             //caso tenha chegado aqui, é hora de upar o arquivo para a tabela de trabalho
                             //mas antes é preciso buscar a ID do usuário
-                            $procuraID = $conn->query("SELECT * FROM participante WHERE `cpf` LIKE '" . $_SESSION['cpf'] . "'");
-                            while ($row = $procuraID->fetch_assoc()){
-                                $id_usuario = $row['cpf'];
-                            }
-                            //Com a ID do usuário podemos enviar o trabalho para a base de dados
 
-                            $result_upload = "INSERT INTO `trabalho`(`id_usuario`, `titulo`, `autor`, `coautor1`, `coautor2`, `coautor3`, `coautor4`, `grandeArea`, `arquivo`) VALUES ('$id_usuario', '$titulo', '$autor', '$coautor1', '$coautor2', '$coautor3', '$coautor4', '$grandeArea', '$nome_final')";
-                            $resultado_upload = mysqli_query($conn, $result_upload);
 
+                                //HORA DE EXCLUIR O ARQUIVO ORIGINAL
+                               //Mudei de ideia... vai que Murphy atenta.
+
+
+                                
+                            $procuraID = $conn->query("UPDATE `trabalho` SET `titulo` = '$titulo', `autor` = '$autor', `coautor1` = '$coautor1', `coautor2` = '$coautor2', `coautor3` = '$coautor3', `coautor4` = '$coautor4', `grandeArea` = '$grandeArea', `arquivo` = '$nome_final' WHERE `trabalho`.`id_trabalho` = $id_trabalho");
+                            
                             if(mysqli_affected_rows($conn) != 0){
                                 echo $idtrabalho.$novoNomeFinal." Trabalho cadastrado com sucesso! <a href='index.php'>Clique aqui para continuar.</a>";
                                 }else{
@@ -96,8 +97,8 @@ $extensao = strtolower(end(explode('.', $_FILES['arquivo']['name'])));
 
                             $mail->isHTML(true);
 
-                            $mail->Subject = utf8_decode(''.$autor.' enviou um trabalho');
-                            $mail->Body    = utf8_decode('<b>'.$autor.'</b> enviou o trabalho <b>'.$titulo.'</b> para visualizar <a href="http://www.ifmtsvc.edu.br/jornadacientifica/jornada2018/materialEnviado/'.$nome_final.'" >clique aqui</a>');
+                            $mail->Subject = utf8_decode(''.$autor.' REenviou um trabalho');
+                            $mail->Body    = utf8_decode('<b>'.$autor.'</b> REenviou o trabalho <b>'.$titulo.'</b> para visualizar <a href="http://www.ifmtsvc.edu.br/jornadacientifica/jornada2018/materialEnviado/'.$nome_final.'" >clique aqui</a>');
 
                                 if(!$mail->send()) {
                                     echo 'Message could not be sent.';
