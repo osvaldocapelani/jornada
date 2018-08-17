@@ -54,24 +54,14 @@ $logado = $_SESSION['nome'];
             <a class="nav-link" href="index.php?p=anais">Anais</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">Autores</a>
+            <a class="nav-link" href="index.php?p=normas-submissao">Normas</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="index.php?p=normas-submissao">Normas para submissão</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="index.php?p=comite-cientifico">Comitê científico</a>
+            <a class="nav-link" href="index.php?p=comite-cientifico">Comitê</a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="index.php?p=login">Área do participante</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">link</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">link</a>
-          </li>
-         
           <?php 
             if ($logado){?>
             <li class="nav-item active">
