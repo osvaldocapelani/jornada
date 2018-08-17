@@ -22,7 +22,8 @@ if (!$_POST){ ?>
     } else {
         include_once("./banco/connect.php");
         $cpf = $_POST["cpf"];
-        $senha = sha1($POST["senha"]);
+        $senha = $_POST["senha"];
+        $senha = md5($senha);
         $result = $conn->query("SELECT * FROM participante WHERE `cpf` LIKE '$cpf' AND `senha` LIKE '$senha'");
         if($result){
             while ($row = $result->fetch_assoc()){
@@ -36,8 +37,11 @@ if (!$_POST){ ?>
                 echo "Conexão realizada. <a href='index.php?p=dashboard'>Entrar.</a>";
             }
             $result->free();
-         }
+         } else {
+            echo "Usuário não encontrado.";
+        }
          $db->close();
+         
 
 
 ?>

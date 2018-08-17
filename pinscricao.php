@@ -39,7 +39,7 @@ Atenção: É importante que informe um e-mail válido. Caso esqueça sua senha,
  
 
         //senha que vai pro banco
-        $senha = sha1($senha);
+        $senha = md5($senha);
 
         $result_usuario = "INSERT INTO participante(nome, cpf, email, senha) VALUES ('$nome','$cpf', '$email', '$senha')";
         $resultado_usuario = mysqli_query($conn, $result_usuario);
