@@ -28,8 +28,8 @@ Atenção: É importante que informe um e-mail válido. Caso esqueça sua senha,
         $senha = $POST["senha"];
         $senha1 = $POST["senha1"];
         //echo $cpf . " " . $senha;
-        echo $senha ."<br />";
-        echo $senha1;
+        //echo $senha ."<br />";
+        //echo $senha1;
         if($email !== $email1){
             echo "E-mails digitados não conferem! <a href='index.php?p=inscricao'>Tente novamente.<br /></a>";
         }
@@ -45,7 +45,7 @@ Atenção: É importante que informe um e-mail válido. Caso esqueça sua senha,
         $resultado_usuario = mysqli_query($conn, $result_usuario);
     
         if(mysqli_affected_rows($conn) != 0){
-                echo "Dados cadastrado com sucesso! <a href='index.php?p=login'>Clique aqui para continuar com o login.</a>";
+                echo "Dados cadastrados com sucesso! <a href='index.php?p=login'>Clique aqui para continuar com o login.</a>";
             }else{
                 echo "Dados não cadastrados! Motivo: ". mysqli_connect_error();
             }

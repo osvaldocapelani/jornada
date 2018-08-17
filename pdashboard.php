@@ -2,6 +2,18 @@
 Painel de Controle
 
 <p><a href="index.php?p=submeter-artigos">Enviar um trabalho (doc ou docx) </a></p>
+<p><a href="index.php?p=mudarSenha">Mudar sua Senha </a></p>
+
+
+<?php
+
+$cpf = $_SESSION['cpf'];
+include_once("./banco/connect.php");
+$procuraTrabalho = $conn->query("SELECT * FROM trabalho WHERE `id_usuario` LIKE '$cpf'");
+if($procuraTrabalho->num_rows < 1){
+    echo "Você ainda não submeteu nenhum trabalho";
+} else {
+?>
 
 <table class="table table-striped">
 <tr>
@@ -11,14 +23,10 @@ Painel de Controle
     <th>Fazer Download</th>
     <th>Reenviar</th>
 </tr>
+
 <?php
-
-$cpf = $_SESSION['cpf'];
-include_once("./banco/connect.php");
-$procuraTrabalho = $conn->query("SELECT * FROM trabalho WHERE `id_usuario` LIKE '$cpf'");
-
     while ($row = $procuraTrabalho->fetch_assoc()){ ?>
-
+        
         <tr><td><?php echo $_SESSION['nome']; ?></td>
         <td><?php echo $row['titulo']; ?></td>
         <td><?php echo $row['autor']; ?></td>
@@ -29,7 +37,9 @@ $procuraTrabalho = $conn->query("SELECT * FROM trabalho WHERE `id_usuario` LIKE 
                 <input type="submit" value="Reenviar">
             </form>
         </td></tr>
-    <?php }?>
+    <?php }
+    }//Final do Else
+    ?>
 
 
 </table>
