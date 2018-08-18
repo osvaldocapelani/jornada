@@ -47,7 +47,7 @@ Atenção: É importante que informe um e-mail válido. Caso esqueça sua senha,
             }else{
                 echo "Dados não cadastrados! Motivo: ". mysqli_connect_error();
             }
-
+            mysqli_close($resultado_usuario);
 ?>
 
 

@@ -10,7 +10,7 @@ if ($_SESSION['nivel'] < 1){
     <p><label style="font-weight: bold">Nome: </label><input type="text" name="nome" value="<?php echo $_SESSION['nome'] ?>" readonly size="40"/></p>
     <p><label style="font-weight: bold">CPF: </label><input type="text" name="cpf" value="<?php echo $_SESSION['cpf'] ?>" readonly /></p>
     <p><label style="font-weight: bold">Senha atual: </label> <input type="password" name="senhaVelha" ></p>
-    <p><label style="font-weight: bold">Nova Senha: </label> <input type="password" name="senha" ></p>
+    <p><label style="font-weight: bold">Nova Senha: </label> <input type="password" name="senhaNova" ></p>
     <p><label style="font-weight: bold">Repita nova senha: </label> <input type="password" name="senha1" ></p>
     <input type="hidden" name="confereSenhaVelha" value="<?php echo $confereSenhaVelha; ?>">
     <p><input type="submit" value="Trocar Senha"></p>

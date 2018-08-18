@@ -1,5 +1,6 @@
 <?php
-// session_start inicia a sessão
+session_save_path('/tmp');
+//ini_set('session.gc_maxlifetime', '28800');//limite do tempo de vida da sessão
 session_start();
 if((!isset ($_SESSION['nome']) == true) and (!isset ($_SESSION['cpf']) == true) and (!isset ($_SESSION['senha']) == true))
 {
@@ -8,8 +9,9 @@ if((!isset ($_SESSION['nome']) == true) and (!isset ($_SESSION['cpf']) == true) 
   unset($_SESSION['senha']);
   unset($_SESSION['nivel']);
 }
- 
-$logado = $_SESSION['nome'];
+
+  $logado = $_SESSION['nome'];
+
 
 ?>
 
