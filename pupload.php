@@ -12,7 +12,7 @@ $arquivo	=$_POST["arquivo"];
 
 //print_r($_POST);
 
-include_once("./banco/connect.php");
+require_once("./banco/connect.php");
 
 
 $_UP['pasta'] = 'materialEnviado/';

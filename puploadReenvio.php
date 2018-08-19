@@ -13,7 +13,7 @@ $id_trabalho = $_POST["id_trabalho"];
 
 //print_r($_POST);
 
-include_once("./banco/connect.php");
+require_once("./banco/connect.php");
 
 
 $_UP['pasta'] = 'materialEnviado/';
