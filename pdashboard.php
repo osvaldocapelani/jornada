@@ -17,7 +17,7 @@ if($procuraTrabalho->num_rows < 1){
 
 <table class="table table-striped">
 <tr>
-    <th>Enviado por</th>
+    <th>Corrigido</th>
     <th>Título</th>
     <th>Autor</th>
     <th>Fazer Download</th>
@@ -27,7 +27,7 @@ if($procuraTrabalho->num_rows < 1){
 <?php
     while ($row = $procuraTrabalho->fetch_assoc()){ ?>
         
-        <tr><td><?php echo $_SESSION['nome']; ?></td>
+        <tr><td><?php echo $row['reenviado']; ?></td>
         <td><?php echo $row['titulo']; ?></td>
         <td><?php echo $row['autor']; ?></td>
         <td><a href="./materialEnviado/<?php echo $row['arquivo']; ?>"target="_blank">Clique aqui para visualizar</a></td>
