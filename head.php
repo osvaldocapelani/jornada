@@ -4,6 +4,7 @@ session_save_path('/tmp');
 session_start();
 if((!isset ($_SESSION['nome']) == true) and (!isset ($_SESSION['cpf']) == true) and (!isset ($_SESSION['senha']) == true))
 {
+  unset($_SESSION['id']);
   unset($_SESSION['nome']);
   unset($_SESSION['cpf']);
   unset($_SESSION['senha']);

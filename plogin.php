@@ -28,7 +28,9 @@
                 if($result){
                     while ($row = $result->fetch_assoc()){
                         $nome = $row['nome'];
+                        $id = $row['id'];
                         $nivel = $row['nivel'];
+                        $_SESSION['id'] = $id;
                         $_SESSION['nome'] = $nome;
                         $_SESSION['cpf'] = $cpf;
                         $_SESSION['senha'] = $senha;

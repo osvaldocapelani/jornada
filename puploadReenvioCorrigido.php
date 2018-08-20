@@ -91,7 +91,7 @@ $extensao = strtolower(end(explode('.', $_FILES['arquivo']['name'])));
                             $mail->Port		= 587;
                             $mail->SMTPSecure = 'tls';
 
-                            $mail->From = 'jornada2017@svc.ifmt.edu.br';//origem
+                            $mail->From = 'jornada2018@svc.ifmt.edu.br';//origem
                             $mail->FromName = 'IX Jornada';
                             $mail->addAddress('osvaldo.capelani@svc.ifmt.edu.br');//destinatario
 
