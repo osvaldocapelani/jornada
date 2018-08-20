@@ -16,12 +16,12 @@ if ($_SESSION['nivel'] < 7){
     include("body.php");
     
     if ($aceitar == 'sim'){
-        $query = "UPDATE `jornada2017`.`avaliacao` SET `parecer` = 'O Trabalho deve ser ACEITO' WHERE `id_trabalho`  = $id_trabalho";
-        $query1 = "UPDATE `jornada2017`.`trabalho` SET `reenviado` = 'aceito' WHERE `id_trabalho`  = $id_trabalho";
+        $query = "UPDATE `jornada2018`.`avaliacao` SET `parecer` = 'O Trabalho deve ser ACEITO' WHERE `id_trabalho`  = $id_trabalho";
+        $query1 = "UPDATE `jornada2018`.`trabalho` SET `reenviado` = 'aceito' WHERE `id_trabalho`  = $id_trabalho";
     
     
-        $resultado = mysql_query($query) or die(mysql_error());
-        $resultado1 = mysql_query($query1) or die(mysql_error());
+        $resultado = $conn->query($query);
+        $resultado1 = $conn->query($query1);
             if ($resultado) {
                 
                 
