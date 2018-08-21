@@ -40,7 +40,7 @@ if ($_SESSION['nivel'] < 9){
 				</td>
 				
 				<td>
-					<a href="../materialEnviado/<?php echo $row['arquivo'];?>" target="_self">Baixar
+					<a href="./materialEnviado/<?php echo $row['arquivo'];?>" target="_self">Baixar
 				</td>
 				<td>
 					<form action="index.php?p=admAtribuirRevisor" method="POST">

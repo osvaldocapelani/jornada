@@ -31,6 +31,15 @@ if ($_SESSION['nivel'] < 1){
     </select>
 </p>
 
+<p><label style="font-weight: bold">Tipo de trabalho:</label>
+    <select  name="tipoTrabalho" required >
+        <option value="Pôster">Pôster para apresentação na sede do Campus São Vicente</option>
+        <option value="Experimento">Experimento para apresentação na Feira do Conhecimento (Jaciara)</option>
+        <option value="Vídeo">Vídeo para apresentação (Jaciara)</option>
+        <option value="Painel">Painel para apresentação (Jaciara)</option>
+    </select>
+</p>
+
 <p><label >Arquivo <span style="font-weight: bold">.doc</span> ou <span style="font-weight: bold">.docx</span> apenas: </label>
 
 <input type="file" name="arquivo"/></p><br />

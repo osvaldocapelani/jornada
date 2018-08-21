@@ -8,6 +8,7 @@ $coautor2	=$_POST["coautor2"];
 $coautor3	=$_POST["coautor3"];
 $coautor4	=$_POST["coautor4"];
 $grandeArea	=$_POST["grandeArea"];
+$tipoTrabalho=$_POST["tipoTrabalho"];
 $arquivo	=$_POST["arquivo"];
 
 //print_r($_POST);
@@ -70,7 +71,7 @@ $extensao = strtolower(end(explode('.', $_FILES['arquivo']['name'])));
                             }
                             //Com a ID do usuário podemos enviar o trabalho para a base de dados
 
-                            $result_upload = "INSERT INTO `trabalho`(`id_usuario`, `titulo`, `autor`, `coautor1`, `coautor2`, `coautor3`, `coautor4`, `grandeArea`, `arquivo`) VALUES ('$id_usuario', '$titulo', '$autor', '$coautor1', '$coautor2', '$coautor3', '$coautor4', '$grandeArea', '$nome_final')";
+                            $result_upload = "INSERT INTO `trabalho`(`id_usuario`, `titulo`, `autor`, `coautor1`, `coautor2`, `coautor3`, `coautor4`, `grandeArea`, `tipoTrabalho`, `arquivo`) VALUES ('$id_usuario', '$titulo', '$autor', '$coautor1', '$coautor2', '$coautor3', '$coautor4', '$grandeArea', '$tipoTrabalho', '$nome_final')";
                             $resultado_upload = mysqli_query($conn, $result_upload);
 
                             if(mysqli_affected_rows($conn) != 0){
